@@ -35,9 +35,14 @@ At the start of the model image fed in to the first layer and output had the sam
 reduced to 28 then after third layer to 14 and before going into the fully connected network there was 13x13x128 feature maps.
 
 ## 2. Results
-### A. The architecture of the influenced model
+### <i> A. The architecture of the influenced model </i>
 The architecture presented in [3] trained and evaluated. The model reached 82% accuracy on test set however on 
 training the accuracy and loss was around %96 and 0.7 respectively which was a clear indicator of overfitting.
 Also for normalization the mean and standard deviation calculated separately for both sets which leaked information 
-to the test dataset.
-![](images/Architecture.JPG)
+to the test dataset.<br>
+![](images/Architecture.jpg)
+<br>
+
+<i>Figure 1. Proposed Architecture</i><br>
+### <i> B.	The proposed architecture </i>
+The proposed architecture trained and evaluated. With the aid of the Google Colab the training took approximately one hour. The loss decreased till 1.9, the accuracy and f1 score was 87% and 86% respectively. Especially adding one more convolutional layer improved the accuracy since more information was taken from images. With the change of the hyperparameters and adding another layer to the feed forward made the network gather more information and made it possible to decrease the loss and increase both accuracy and f1score. As seen in the classification report especially for roundish numbers 3,6 and 8 the model can predict better when they are actually that numbers (recall) but can easily get confused them with other ones (precision). So, the reason behind slightly worse f1 scores on that numbers are precision rather than recall. First intention is to build a bigger model with more convolutional layers however on a laptop even with the help of Google Colab bigger models got “exhausted” errors.<br>

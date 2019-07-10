@@ -39,10 +39,22 @@ reduced to 28 then after third layer to 14 and before going into the fully conne
 The architecture presented in [3] trained and evaluated. The model reached 82% accuracy on test set however on 
 training the accuracy and loss was around %96 and 0.7 respectively which was a clear indicator of overfitting.
 Also for normalization the mean and standard deviation calculated separately for both sets which leaked information 
-to the test dataset.<br>
+to the test dataset.<br><br>
 ![](images/Architecture.jpg)
 <br>
 
 <i>Figure 1. Proposed Architecture</i><br>
 ### <i> B.	The proposed architecture </i>
-The proposed architecture trained and evaluated. With the aid of the Google Colab the training took approximately one hour. The loss decreased till 1.9, the accuracy and f1 score was 87% and 86% respectively. Especially adding one more convolutional layer improved the accuracy since more information was taken from images. With the change of the hyperparameters and adding another layer to the feed forward made the network gather more information and made it possible to decrease the loss and increase both accuracy and f1score. As seen in the classification report especially for roundish numbers 3,6 and 8 the model can predict better when they are actually that numbers (recall) but can easily get confused them with other ones (precision). So, the reason behind slightly worse f1 scores on that numbers are precision rather than recall. First intention is to build a bigger model with more convolutional layers however on a laptop even with the help of Google Colab bigger models got “exhausted” errors.<br>
+The proposed architecture trained and evaluated. With the aid of the Google Colab the training took approximately one hour. The loss decreased till 1.9, the accuracy and f1 score was 87% and 86% respectively. Especially adding one more convolutional layer improved the accuracy since more information was taken from images. With the change of the hyperparameters and adding another layer to the feed forward made the network gather more information and made it possible to decrease the loss and increase both accuracy and f1score. As seen in the classification report especially for roundish numbers 3,6 and 8 the model can predict better when they are actually that numbers (recall) but can easily get confused them with other ones (precision). So, the reason behind slightly worse f1 scores on that numbers are precision rather than recall. First intention is to build a bigger model with more convolutional layers however on a laptop even with the help of Google Colab bigger models got “exhausted” errors.<br><br>
+![](images/Results.jpg)
+<br>
+<i>Figure 2. Results</i><br>
+## 3. Conclusion
+The purpose of this project to get close to the state-of-art with a similar structure. However, when bigger models build such as a model similar to AlexNet the GPU power of the laptop at hand was not enough even with Google Colab. Even if the criteria don’t meet this model succeeded its predecessor
+[3] and got better results. Future work can be building a bigger model or rebuilding the models that proven to be good at image processing and work more to solve the “exhausted” problem to get better results.
+<br><br>
+# References
+[1]	Yuval Netzer, Tao Wang, Adam Coates, Alessandro Bissacco, Bo Wu, Andrew Y. Ng Reading Digits in Natural Images with Unsupervised Feature Learning NIPS Workshop on Deep Learning and Unsupervised Feature	Learning	2011	Retrieved	from http://ufldl.stanford.edu/housenumbers <br>
+[2]	Goodfellow, Ian J., et al. "Multi-digit number recognition from street view imagery using deep convolutional neural networks." arXiv preprint arXiv:1312.6082 (2013). <br>
+[3]	https://github.com/VladislavPrh/MDR/K. <br>
+

@@ -40,3 +40,4 @@ The architecture presented in [3] trained and evaluated. The model reached 82% a
 training the accuracy and loss was around %96 and 0.7 respectively which was a clear indicator of overfitting.
 Also for normalization the mean and standard deviation calculated separately for both sets which leaked information 
 to the test dataset.
+![](images/Architecture.JPG)

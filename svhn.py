@@ -178,13 +178,6 @@ def get_Img_Struct(digitStructBbox,digitStructName,digit_structure):
   return result
 
 
-
-
-
-
-
-
-
 def generate_dataset(data, folder):
 
     dataset = np.ndarray([len(data),64,64,3], dtype='float32')
@@ -491,8 +484,6 @@ def test(image):
   na_zero_pred = np.where(pred.flatten() != 10)
   plotting(test_im,"-",1,1)
   print(pred.flatten()[na_zero_pred])
-
-
 
 
 

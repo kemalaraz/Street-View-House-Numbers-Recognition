@@ -1,4 +1,8 @@
 # Street-View-House-Numbers-Recognition
+
+## Requirements
+This repository is tested with Python 3.6+ and tensorflow==1.13.1
+
 ## Abstract
 This document defines, explains and demonstrates results of a model for image recognition of multi- digit numbers through a widely used approach of Deep Learning.
 
